@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+enum Engine{ Petrol, Diesel, Electric, Hybrid};
+class Model
+{
+private:
+	int power;
+	float basePrice;
+	char *name;
+	Engine engine;
+
+public:
+	Model();
+	~Model();
+
+	int getPower();
+	Engine getEngine();
+	float getBasePrice();
+	const char* getName();
+	void setPower(int);
+	void setEngine(Engine);
+	void setBasePrice(float);
+	void setName(const char*);
+	Model(const char* nom, int puissance, Engine moteur, float prix);
+	Model(const Model& M);
+
+
+	void display();
+	
+};

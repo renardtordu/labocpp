@@ -7,26 +7,28 @@
 
 using namespace carconfig;
 using namespace std;
-
-class Car
+namespace carconfig
 {
-private:
-	string name;
-	Model model;
-	Option* option[5];
+	class Car
+	{
+	private:
+		string name;
+		Model model;
+		Option* option[5];
 
-public:
-	void removeOption(string);
-	float getPrice();
-	void addOption(const Option&);
-	Car();
-	Car(string, Model);
-	Car(const Car& c);
-	void setName(string n);
-	string getName() const;
-	Model getModel() const;
-	void setModel(Model m);
-	~Car();
-	void display();
-};
+	public:
+		void removeOption(string);
+		float getPrice();
+		void addOption(const Option&);
+		Car();
+		Car(string, Model);
+		Car(const Car& c);
+		void setName(string n);
+		string getName() const;
+		Model getModel() const;
+		void setModel(Model m);
+		~Car();
+		void display();
+	};
+}
 #endif
